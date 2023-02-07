@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Counter App Programmer Tersesat</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: #f1c40f;">
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4"></div>
+    <!-- Body Counter APP  -->
+    <div class="col-lg-4">
+        <div class="row" style="margin-top: 50%;">
+            <center>
+                <div style="background-color: #8e44ad;padding-top: 50px;padding-bottom: 50px;border-radius: 10px;">
+                    <h1 id="result" style="color: white;font-size: 100px;">0</h1>
+                </div>
+            </center>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <center>
+                <button type="button" class="btn btn-danger" onclick="clickMinus()">Minus (-)</button>
+                <button type="button" class="btn btn-light" onclick="clickReset()">Reset</button>
+                <button type="button" class="btn btn-success" onclick="clickPlus()">Plus (+)</button>
+            </center>
+        </div>
+    </div>
+    <!-- Body Counter APP  -->
+    <div class="col-lg-4"></div>
+  </div>
+</div>
+<script>
+
+    var result = 0;
+
+    function clickMinus(){
+        result--;
+
+        if(result <= 0){
+            document.getElementById("result").innerHTML = 0;
+            result = 0;
+        }else{
+            document.getElementById("result").innerHTML = result;
+        }
+       
+        console.log("This is minus");
+    }
+
+    function clickReset(){
+        document.getElementById("result").innerHTML = 0;
+        result = 0;
+        console.log("This is reset");
+    }
+
+    function clickPlus(){
+        result++;
+        document.getElementById("result").innerHTML = result;
+        console.log("This is plus");
+    }
+</script>
+</body>
+</html>
